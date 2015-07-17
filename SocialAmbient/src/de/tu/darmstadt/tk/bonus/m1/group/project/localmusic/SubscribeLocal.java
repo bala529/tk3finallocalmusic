@@ -8,9 +8,11 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import de.tu.darmstadt.tk.bonus.m1.group.project.localmusic.*;
 
 /**
- * 
  * @author dinesh
+ * @author balu
+ * @author gopi
  *
+ *  Subscription code to mosquitto server
  */
 public class SubscribeLocal implements MqttCallback {
 	MqttClient client;

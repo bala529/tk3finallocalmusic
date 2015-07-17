@@ -5,7 +5,10 @@ package de.tu.darmstadt.tk.bonus.m1.group.project.localmusic;
 
 /**
  * @author dinesh
+ * @author balu
+ * @author gopi
  *
+ * All the constants
  */
 public class Constants {
 

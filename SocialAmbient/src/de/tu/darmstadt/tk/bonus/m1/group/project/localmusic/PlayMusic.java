@@ -7,9 +7,11 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.FloatControl;
 /**
- * 
- * @author Gopi
+ * @author dinesh
+ * @author balu
+ * @author gopi
  *
+ * List of local songs stored in the song folder from the root directory.
  */
 public class PlayMusic {
 	Clip clip;	
