@@ -53,4 +53,9 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+              	<target name="local">
+              	        <java classname="de.tu.darmstadt.tk.bonus.m1.group.project.localmusic.SubscribeLocal" failonerror="true" fork="yes">
+              	            <classpath refid="SocialAmbientFacebook.classpath"/>
+              	        </java>
+              	    </target>
 </project>
