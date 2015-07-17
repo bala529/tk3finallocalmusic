@@ -19,87 +19,87 @@ public class PlayMusic {
 	String moodIntensity = null;
 	File song;
 	boolean sleep;
-	public static String[] moodNames = {
-		 "loved",
-		 "happy",
-		 "surprised",
-		 "angry",
-		 "envy",
-		 "sad",
-		 "fear",
-		 "neutral",
+	public static String[] songNames = {
+		 "song1",
+		 "song2",
+		 "song3",
+		 "song4",
+		 "song5",
+		 "song6",
+		 "song7",
+		 "song8",
 		 "sleep"
 		} ;
 	
-	public  void playTrack(String mood1, int playCounter)
+	public  void playTrack(String playingSong, int playCounter)
 	{						
-		if(mood1.toLowerCase().contains(moodNames[0]))
+		if(playingSong.toLowerCase().contains(songNames[0]))
 		{
 			sleep = false;
 			song = new File ("songs/loved.mp3");
-			System.out.println("loved received in playsong");			
+			//System.out.println("loved received in playsong");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[1]))
+		else if(playingSong.toLowerCase().contains(songNames[1]))
 		{
 			sleep = false;
 			song = new File ("songs/happy.mp3");
-			System.out.println("happy received in playsong");			
+			//System.out.println("happy received in playsong");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[2]))
+		else if(playingSong.toLowerCase().contains(songNames[2]))
 		{	
 			sleep = false;
-			System.out.println("surprised received in playsong");					
+			//System.out.println("surprised received in playsong");					
 			song = new File ("songs/surprise.mp3");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[3]))
+		else if(playingSong.toLowerCase().contains(songNames[3]))
 		{
 			sleep = false;
-			System.out.println("angry received in playsong");										
+			//System.out.println("angry received in playsong");										
 			song = new File ("songs/angry.mp3");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[4]))
+		else if(playingSong.toLowerCase().contains(songNames[4]))
 		{
 			sleep = false;
-			System.out.println("envy received in playsong");
+			//System.out.println("envy received in playsong");
 			song = new File ("songs/envy.mp3");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[5]))
+		else if(playingSong.toLowerCase().contains(songNames[5]))
 		{
 			sleep = false;
-			System.out.println("sad received in playsong");
+			//System.out.println("sad received in playsong");
 			song = new File ("songs/sad.mp3");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[6]))
+		else if(playingSong.toLowerCase().contains(songNames[6]))
 		{
 			sleep = false;
-			System.out.println("fear received in playsong");
+			//System.out.println("fear received in playsong");
 			song = new File ("songs/fear.mp3");			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[7]))
+		else if(playingSong.toLowerCase().contains(songNames[7]))
 		{
 			sleep = false;
-			System.out.println("neutral received in playsong");
+			//System.out.println("neutral received in playsong");
 			song = new File ("songs/neutral.mp3");			
 			
 		}
-		else if(mood1.toLowerCase().contains(moodNames[8]))
+		else if(playingSong.toLowerCase().contains(songNames[8]))
 		{
-			System.out.println("sleep received in playsong");
+			//System.out.println("sleep received in playsong");
 			song = new File ("songs/envy.mp3");
 			sleep = true;
 			intensity = -100.0f;
 		}
 		
-		if (mood1.toLowerCase().contains("mild")){
+		if (playingSong.toLowerCase().contains("mild")){
 			intensity = -16.0f;
 		}
-		else if (mood1.toLowerCase().contains("considerable")){
+		else if (playingSong.toLowerCase().contains("considerable")){
 			intensity = -6.0f;
 		}
-		else if (mood1.toLowerCase().contains("extreme")){
+		else if (playingSong.toLowerCase().contains("extreme")){
 			intensity = 6.0f;
 		}
-		System.out.println(song);
+		//System.out.println(song);
 		
 		initializeSong (intensity,playCounter);		
 	}
@@ -110,12 +110,12 @@ public class PlayMusic {
 			 if(counter > 1) 
 			 {
 				 
-				 System.out.println("counter >1 if statement"); 
+				 //System.out.println("counter >1 if statement"); 
 				 if (clip.isOpen())
 					 {			
 					 	clip.flush();
 					 	clip.close();					 	
-					 	System.out.println("Previous Song is stopped");
+					 	//System.out.println("Previous Song is stopped");
 					 }
 			 }
 
@@ -129,7 +129,7 @@ public class PlayMusic {
 			 clip.open(audioStream2);
 			 FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 			 gainControl.setValue(intensity); // Reduce volume by 10 decibels. -25.0f			
-			 System.out.println(counter);  // step 1			
+			 //System.out.println(counter);  // step 1			
 		}
 		catch(Exception e)
 		{
@@ -144,12 +144,12 @@ public class PlayMusic {
 	                		{
 	                			clip.flush();
 	    					 	clip.close();					 	
-	    					 	System.out.println("Sleep Song is played");
+	    					 	//System.out.println("Sleep Song is played");
 	                		}
-	                	System.out.println("New Song is being played now"); 	                	
+	                	//System.out.println("New Song is being played now"); 	                	
 	                } 
 	                catch (Exception e) {
-	                    System.out.println(e);
+	                    //System.out.println(e);
 	                    
 	                }
 	           }
