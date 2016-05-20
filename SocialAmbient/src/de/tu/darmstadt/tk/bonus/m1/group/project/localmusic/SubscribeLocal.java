@@ -18,7 +18,7 @@ public class SubscribeLocal implements MqttCallback {
 	MqttClient client;
 	MqttMessage message;
 	int playCounter = 0;
-	PlayMusic musicPlayer =new PlayMusic();
+	PlayMusic musicPlayer = new PlayMusic();
 	
 	public static void main(String[] args) {
 
